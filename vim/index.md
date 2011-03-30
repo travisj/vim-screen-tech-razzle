@@ -76,22 +76,22 @@
 !SLIDE
 
 # Nerdtree
-![nerdtree](nerdtree.png)
+![nerdtree](https://github.com/travisj/vim-screen-tech-razzle/raw/master/vim/nerdtree.png)
 
 !SLIDE
 
 # Snipmate (before)
-![snipmate-before](snipmate-before.png)
+![snipmate-before](https://github.com/travisj/vim-screen-tech-razzle/raw/master/vim/snipmate-before.png)
 	
 !SLIDE
 
 # Snipmate (after)
-![snipmate-after](snipmate-after.png)
+![snipmate-after](https://github.com/travisj/vim-screen-tech-razzle/raw/master/vim/snipmate-after.png)
 	
 !SLIDE
 
 # Command-T
-![command-t](command-t.png)
+![command-t](https://github.com/travisj/vim-screen-tech-razzle/raw/master/vim/command-t.png)
 	
 !SLIDE
 
