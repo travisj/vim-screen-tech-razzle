@@ -1,0 +1,235 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>Screen & Vim</title>
+
+  <link rel="stylesheet" href="./css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="./css/showoff.css" type="text/css"/>
+
+  <script type="text/javascript" src="./js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="./js/jquery-print.js"></script>
+  <script type="text/javascript" src="./js/jquery.batchImageLoad.js"></script>
+
+  <script type="text/javascript" src="./js/jquery.doubletap-0.1.js"></script>
+
+  <script type="text/javascript" src="./js/fg.menu.js"></script>
+  <script type="text/javascript" src="./js/showoff.js"></script>
+  <script type="text/javascript" src="./js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src="./js/sh_main.min.js"></script>
+  <script type="text/javascript" src="./js/core.js"></script>
+  <script type="text/javascript" src="./js/showoffcore.js"></script>
+
+  <link type="text/css" href="./css/fg.menu.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/theme/ui.all.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/sh_style.css" rel="stylesheet" >
+
+  
+    <link rel="stylesheet" href="file/style.css" type="text/css"/>
+  
+
+  
+
+  <script type="text/javascript">
+  $(function(){
+    setupPreso(false, './');
+  });
+  </script>
+</head>
+
+<body>
+
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+<div id="help">
+  <table>
+    <tr><td class="key">space, &rarr;</td><td>next slide</td></tr>
+    <tr><td class="key">&larr;</td><td>previous slide</td></tr>
+    <tr><td class="key">d</td><td>debug mode</td></tr>
+    <tr><td class="key">## &lt;ret&gt;</td><td>go to slide #</td></tr>
+    <tr><td class="key">c</td><td>table of contents (vi)</td></tr>
+    <tr><td class="key">f</td><td>toggle footer</td></tr>
+    <tr><td class="key">r</td><td>reload slides</td></tr>
+    <tr><td class="key">z</td><td>toggle help (this)</td></tr>
+  </table>
+</div>
+
+<div class="buttonNav">
+  <input type="submit" onClick="prevStep();" value="prev"/>
+  <input type="submit" onClick="nextStep();" value="next"/>
+</div>
+
+<div id="preso">loading presentation...</div>
+<div id="footer">
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div class="slide" data-transition="none"><div class="content" ref="intro/index">
+<h1>VIM &amp; SCREEN</h1>
+
+<p><img src="file:///Users/appnexusemployee-travis/Desktop/vim_and_screen/intro/screenshot.png" alt="Screen and Vim"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="screen/index/1">
+<h1>connecting to screen</h1>
+
+<h2>screen -D -RR</h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="screen/index/2">
+<h1>moving around</h1>
+
+<ul>
+<li>ctrl-a 0-9</li>
+<li>ctrl-a n</li>
+<li>ctrl-a p</li>
+<li>ctrl-a ctrl-a</li>
+<li>ctrl-a ' / name or number</li>
+<li>ctrl-a " / select using j/k &amp; enter</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="screen/index/3">
+<h1>other commands</h1>
+
+<ul>
+<li>new window: ctrl-a c</li>
+<li>name window: ctrl-a shift-a</li>
+<li>scroll: ctrl-a esc / movement (j, k, ctrl-b, ctrl-f)</li>
+<li>kill window: ctl-a shift-k</li>
+<li>see all commands: ctrl-a ?</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="screen/index/4">
+<h1>screenrc</h1>
+
+<pre class="sh_"><code>vbell on
+nethack on 
+vbell_msg ""
+autodetach on
+startup_message off
+pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
+shell -$SHELL
+msgminwait 3
+
+hardstatus alwayslastline "%{.cb}%-W%{.rW}%50L&gt; %n %t%{-}%+W%L&lt;%-37=%{+b}%{.bc} %D %Y-%m-%d %{.bY}%c%{-b} %{.bc}%l "</code></pre>
+
+<h2><a href="https://gist.github.com/08601a46afc1a4297e31">my .srceenrc</a></h2></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="vim/index/1">
+<h1>vim</h1></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="vim/index/2">
+<h1>modes</h1>
+
+<ul>
+<li>Normal mode: esc</li>
+<li>Visual mode: v, ctl-v, shift-v</li>
+<li>Insert mode: i, a, o, etc.</li>
+<li>Command-line mode: :</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="vim/index/3">
+<h1>moving around in normal mode</h1>
+
+<ul>
+<li>j, k, l, m - up, down, left, right</li>
+<li>ctrl-b, ctrl-f - page up, page down</li>
+<li>ctrl-e, ctrl-y - scroll down, scroll up</li>
+<li>gg, G - first line, last line</li>
+<li>^, $ - beginning of line, end of line</li>
+<li>:100 - go to line 100</li>
+<li>w, b - forward one word, back one word</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="vim/index/4">
+<h1>copy, paste, &amp; delete</h1>
+
+<ul>
+<li>yy - copy (yank)</li>
+<li>p - paste (put)</li>
+<li>dw - delete word</li>
+<li>d$ - delete to end of line</li>
+<li>dd - delete entire line</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="vim/index/5">
+<h1>undo &amp; redo</h1>
+
+<ul>
+<li>u - undo last change</li>
+<li>ctrl-r - redo</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="vim/index/6">
+<h1>search &amp; search/replace</h1>
+
+<ul>
+<li>/</li>
+<li>n, p - find next, find previous</li>
+<li>:s/search/replace/g - current line</li>
+<li>:%s/search/replace/g - entire file</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="vim/index/7">
+<h1>open file</h1>
+
+<ul>
+<li>:e path/to/file</li>
+<li>:sp path/to/file - horizontal split file</li>
+<li>:vsp path/to/file - vertical split file</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="vim/index/8">
+<h1>save &amp; quit</h1>
+
+<ul>
+<li>:w - save</li>
+<li>:q - quit</li>
+<li>:wq - save &amp; quit</li>
+<li>:q! - quit without saving</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="vim/index/9">
+<h1>customizing vim</h1>
+
+<ul>
+<li>~/.vimrc</li>
+<li>plugins</li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="vim/index/10">
+<h1>plugins</h1>
+
+<ul>
+<li><a href="https://github.com/tpope/vim-pathogen">Pathogen</a></li>
+<li><a href="https://github.com/scrooloose/nerdtree">Nerdtree</a></li>
+<li><a href="https://github.com/msanders/snipmate.vim">snipmate</a></li>
+<li><a href="https://github.com/wincent/Command-T">command-t</a></li>
+</ul>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="vim/index/11">
+<h1>Nerdtree</h1>
+
+<p><img src="file:///Users/appnexusemployee-travis/Desktop/vim_and_screen/vim/nerdtree.png" alt="nerdtree"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="vim/index/12">
+<h1>Snipmate (before)</h1>
+
+<p><img src="file:///Users/appnexusemployee-travis/Desktop/vim_and_screen/vim/snipmate-before.png" alt="snipmate-before"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="vim/index/13">
+<h1>Snipmate (after)</h1>
+
+<p><img src="file:///Users/appnexusemployee-travis/Desktop/vim_and_screen/vim/snipmate-after.png" alt="snipmate-after"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="vim/index/14">
+<h1>Command-T</h1>
+
+<p><img src="file:///Users/appnexusemployee-travis/Desktop/vim_and_screen/vim/command-t.png" alt="command-t"/></p></div>
+</div><div class="slide" data-transition="none"><div class="content" ref="vim/index/15">
+<h1>my entire .vim setup</h1>
+
+<h3><a href="https://github.com/travisj/dotvim">https://github.com/travisj/dotvim</a></h3></div>
+</div>
+</div>
+
+</body>
+</html>
