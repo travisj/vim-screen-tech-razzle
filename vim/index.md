@@ -2,6 +2,11 @@
 
 # vim
 
+	Vim is an advanced text editor that seeks 
+	to provide the power of the de-facto Unix 
+	editor 'Vi', with a more complete feature 
+	set.
+
 !SLIDE
 
 # modes
