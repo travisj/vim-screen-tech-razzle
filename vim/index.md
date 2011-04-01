@@ -18,7 +18,7 @@
 !SLIDE
 
 # moving around in normal mode
-* j, k, l, m - up, down, left, right
+* j, k, l, h - up, down, left, right
 * ctrl-b, ctrl-f - page up, page down
 * ctrl-e, ctrl-y - scroll down, scroll up
 * gg, G - first line, last line
@@ -45,7 +45,7 @@
 
 # search & search/replace
 * /
-* n, p - find next, find previous
+* n, N - find next, find previous
 * :s/search/replace/g - current line
 * :%s/search/replace/g - entire file
 	

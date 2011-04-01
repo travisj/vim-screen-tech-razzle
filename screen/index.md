@@ -9,6 +9,23 @@
 
 !SLIDE
 
+# .screenrc
+	@@@
+	vbell on
+	nethack on 
+	vbell_msg ""
+	autodetach on
+	startup_message off
+	pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
+	shell -$SHELL
+	msgminwait 3
+
+	hardstatus alwayslastline "%{.cb}%-W%{.rW}%50L> %n %t%{-}%+W%L<%-37=%{+b}%{.bc} %D %Y-%m-%d %{.bY}%c%{-b} %{.bc}%l "
+
+## [my .srceenrc](https://gist.github.com/08601a46afc1a4297e31)
+
+!SLIDE
+
 # connecting to screen
 ## screen -D -RR
 
@@ -30,20 +47,3 @@
 * scroll: ctrl-a esc / movement (j, k, ctrl-b, ctrl-f)
 * kill window: ctl-a shift-k
 * see all commands: ctrl-a ?
-
-!SLIDE
-
-# screenrc
-	@@@
-	vbell on
-	nethack on 
-	vbell_msg ""
-	autodetach on
-	startup_message off
-	pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
-	shell -$SHELL
-	msgminwait 3
-
-	hardstatus alwayslastline "%{.cb}%-W%{.rW}%50L> %n %t%{-}%+W%L<%-37=%{+b}%{.bc} %D %Y-%m-%d %{.bY}%c%{-b} %{.bc}%l "
-
-## [my .srceenrc](https://gist.github.com/08601a46afc1a4297e31)
